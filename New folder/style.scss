@@ -1,0 +1,478 @@
+@import "font";
+@import "variables";
+@import "base";
+@import "utility";
+
+
+.house {
+    line-height: 0;
+    height: 35px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(241, 239, 239);
+}
+
+.footerMode {
+    height: 33px;
+    border-radius: 50px;
+    background-color: rgb(241, 239, 239);
+    max-width: 270px;
+
+    .mood_ {
+        color: $gray-500;
+        width: 116px;
+        border-radius: 50px;
+        border: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.active_ {
+            color: $gray-800;
+            background-color: #FCFCFC;
+            box-shadow: 0px 4px 8px -4px;
+        }
+
+        &:nth-of-type(2) {
+            &.active_ {
+                background-color: $gray-900;
+                color: #FCFCFC;
+                box-shadow: 0px 0 0 0;
+
+            }
+        }
+
+    }
+
+}
+
+.searchBox {
+    height: 45px;
+    width: 355px;
+    border-radius: 10px;
+    background-color: rgb(241, 239, 239);
+}
+
+.dash {
+    line-height: 1.2;
+    font-weight: 600;
+    margin-left: -15px;
+}
+
+.main {
+    background-color: rgb(241, 239, 239);
+
+    .over {
+        width: 17px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: $orange;
+    }
+
+    .over2 {
+        @extend.over;
+        background-color: $purple;
+    }
+
+    .over3 {
+        @extend.over;
+        background-color: $yellow;
+    }
+
+    .over4 {
+        @extend.over;
+        background-color: $green-100;
+    }
+
+    .over5 {
+        @extend.over;
+        background-color: $cyan;
+    }
+
+    .select-box {
+        width: 135px;
+        border-radius: 12px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+
+
+    .overMod {
+        border-radius: 20px;
+        height: 125px;
+        background-color: rgb(241, 239, 239);
+
+        &.dark {
+            background-color: $black  !important;
+        }
+
+        .lala {
+            height: 115px;
+            width: 49%;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.active {
+                background-color: #FCFCFC;
+                box-shadow: 0px 4px 8px -4px;
+
+                &.dark {
+                    background-color: $gray-900  !important;
+                    box-shadow: none;
+                }
+            }
+
+        }
+
+        .tggreen {
+            color: $green-100;
+        }
+
+        .tgpinc {
+            color: $red;
+        }
+    }
+
+    .cifo {
+        width: 37px;
+        height: 37px;
+        margin-left: 14px;
+    }
+
+    .cif {
+        @extend.cifo;
+        background-color: $purple;
+    }
+
+    .usname {
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+        }
+    }
+
+    .bt {
+        border: 1px solid silver;
+        border-radius: 10px;
+        height: 45px;
+    }
+
+    .btt {
+        @extend.bt;
+        // width: 200px;
+    }
+
+    .users-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin: -32px -16px 0;
+
+        .tip__item {
+            display: flex;
+            margin: 32px 16px 0;
+            color: #1A1D1F;
+            cursor: pointer;
+
+            &:nth-child(1) {
+                .tip__status {
+                    background: #CABDFF;
+                }
+            }
+
+            &:nth-child(2) {
+                .tip__status {
+                    background: #B5E4CA;
+                    ;
+                }
+            }
+
+            &:nth-child(4) {
+                .tip__status {
+                    background: #FFBC99;
+                    ;
+                }
+            }
+
+            &:nth-child(5) {
+                .tip__status {
+                    background: #B5E4CA;
+                    ;
+                }
+            }
+
+            .tip__icon {
+                flex-shrink: 0;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                border: 2px solid #EFEFEF;
+                margin-right: 12px;
+                transition: background .2s;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    color: #272B30;
+                }
+            }
+
+            .tip__details {
+                flex-grow: 1;
+
+                .tip__line {
+                    .tip__status {
+                        display: inline-block;
+                        padding: 0 8px;
+                        border-radius: 6px;
+                        font-size: 12px;
+                        line-height: 24px;
+                        font-weight: 700;
+                        margin-right: 4px;
+
+                    }
+
+                    .tip__user {
+                        display: inline-flex;
+                        align-items: center;
+                        padding: 1px 8px 1px 1px;
+                        border: 1px solid #EFEFEF;
+                        border-radius: 4px;
+
+                        .tip__avatar {
+                            flex-shrink: 0;
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 4px;
+                            font-size: 0;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 2px;
+                            }
+                        }
+
+                        .tip__action {
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 1.33333;
+                            color: #6F767E;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidedark {
+    .some{
+        width: 50px;
+    }
+
+    a {
+        &:hover {
+            i {
+                color: $black  !important;
+            }
+
+            .text-black-50 {
+                color: $black  !important;
+            }
+        }
+    }
+
+    &.active_ {
+        background-color: $dark  !important;
+
+        a {
+            &:hover {
+                i {
+                    color: $white  !important;
+                }
+
+                .text-black-50 {
+                    color: $white  !important;
+                }
+            }
+        }
+
+        .text-black-50 {
+            color: $gray-500  !important;
+
+            &:hover {
+                color: $white  !important;
+            }
+        }
+
+        .footerMode {
+            background-color: $black;
+        }
+
+        .house {
+            background-color: $gray-900  !important;
+
+            .dak {
+                color: $white  !important;
+
+            }
+        }
+    }
+}
+
+
+
+.backdark {
+    &.active_ {
+        background-color: $black  !important;
+
+        h2 {
+            color: $white;
+        }
+    }
+
+    .navbardark {
+        &.active_ {
+            background-color: $dark  !important;
+
+            .text-black-50 {
+                color: $gray-400  !important;
+            }
+
+            .searchBox {
+                background-color: $gray-900;
+
+                button {
+                    background-color: $black;
+                    color: $white;
+                    border-color: $black;
+                }
+
+                .inputdark {
+                    color: $gray-300  !important;
+                }
+            }
+
+            .btdark {
+                background-color: $dark;
+                color: $white  !important;
+                border-color: $dark;
+            }
+        }
+    }
+
+    .maindark {
+
+        .vall {
+            width: 64px;
+            height: 64px;
+            background-color: rgb(230, 225, 225);
+        }
+
+        .vall2 {
+            width: 48px;
+            height: 48px;
+            background-color: $pink;
+        }
+
+        &.active_ {
+            background-color: $black;
+            color: $white  !important;
+
+            .vall {
+                background-color: $gray-900  !important;
+
+            }
+
+            .border-bottom {
+                border-color: $gray-800  !important;
+            }
+
+            button {
+                background-color: $dark  !important;
+                color: $white  !important;
+                border-color: $gray-800;
+            }
+
+            h2 {
+                color: $white;
+            }
+
+            .bg-dk {
+                background-color: $dark  !important;
+            }
+
+            .text-black-50 {
+                color: $gray-500  !important;
+
+                .dk {
+                    color: $white  !important
+                }
+            }
+
+            .tip__user {
+                border-color: $gray-800  !important;
+            }
+
+            .tip__title {
+                color: $white  !important;
+            }
+
+            .tip__icon {
+                border-color: $gray-800;
+                transition: background .2s;
+
+                svg {
+                    color: $white;
+                }
+            }
+
+            .select-box {
+                background-color: $dark;
+                color: $gray-600;
+                border-color: $gray-800  !important;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .pk {
+        background-color: $pink;
+        color: $red;
+        padding-right: 4px;
+        border-radius: 4px;
+    }
+
+    .pk2 {
+        @extend.pk;
+        border-radius: 6px;
+        margin: 7px 7px 0 0;
+    }
+
+    .gn {
+        background-color: $greenLight;
+        color: $green;
+        padding-right: 4px;
+        border-radius: 4px;
+        width: 52px;
+        margin-left: 27px;
+    }
+
+    .gn2 {
+        @extend.gn;
+        border-radius: 6px;
+        margin: 7px 7px 0 0;
+    }
+}

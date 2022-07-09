@@ -1,0 +1,17 @@
+.orangeBox{
+    width: 20px;
+    height:20px ;
+    color: white;
+    background-color: $yellow;
+}
+
+.violetBox{
+    @extend .orangeBox;
+    background-color: $purple;
+}
+
+.greenBox{
+    @extend .orangeBox;
+    background-color: $green-100;
+
+}
